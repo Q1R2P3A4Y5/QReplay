@@ -7,7 +7,7 @@ QReplay is an integrated QR code processing framework that combines a Matlab-bas
 ## Prerequisites
 
 - Linux or macOS
-- Python 3
+- Python 3.X
 - Matlab 2019a
 - CPU or NVIDIA GPU with CUDA and cuDNN
 
@@ -15,24 +15,19 @@ QReplay is an integrated QR code processing framework that combines a Matlab-bas
 
 ## Getting Started
 
-### Step 1 — DCD Module (Matlab Reconstruction)
+## Step 1 — DCD 
 
 The DCD module is used for QR code digital content decomposition and initial reconstruction.
 
 **Requirement:** Matlab 2019a
 
-**Run the demo:**
-
-1. Open Matlab
-2. Change the working directory to the `DCD` folder
-3. Run:
-
+**Run the demo**
 ```matlab
 main_recon_demo
+```
 
-###  Step 2 — QR-Unet Module
-
-Installation:
+##  Step 2 — QR-Unet 
+### Installation
 
 Install PyTorch (0.4 or later) and torchvision from:
 http://pytorch.org
@@ -40,24 +35,26 @@ http://pytorch.org
 Install additional dependencies (such as visdom and dominate) using:
 pip install -r requirements.txt
 
-Train a Model:
+### Train a Model
 
 Start training with:
+```
 python train.py \
   --dataroot ./qrcodes-mix/datasets/train \
   --name qrcodes_blur2 \
   --niter 200 \
   --niter_decay 100 \
   --batch_size 256
-
-Test the Model:
+```
+### Test the Model
 
 Run batch testing with test2.py. Replace the experiment name with your trained model name:
+```
 python test2.py \
   --dataroot ./qrcodes-mix/datasets/test \
   --model pix2pix \
   --name your weight name
-
+```
 ## Disclaimer
 
 ### Use Restriction
