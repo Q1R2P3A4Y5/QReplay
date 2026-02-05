@@ -29,14 +29,11 @@ main_recon_demo
 ##  Step 2 — QR-Unet 
 ### Installation
 
-Install PyTorch (0.4 or later) and torchvision from:
-http://pytorch.org
-
-Install additional dependencies (such as visdom and dominate) using:
+Install PyTorch 0.4+ and torchvision from http://pytorch.org and other dependencies (e.g., visdom and dominate). You can install all the dependencies by
+```
 pip install -r requirements.txt
-
+```
 ### Train a Model
-
 Start training with:
 ```
 python train.py \
