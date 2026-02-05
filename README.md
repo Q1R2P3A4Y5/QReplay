@@ -38,10 +38,11 @@ Start training with:
 ```
 python train.py \
   --dataroot ./qrcodes-mix/datasets/train \
-  --name qrcodes_blur2 \
-  --niter 200 \
-  --niter_decay 100 \
-  --batch_size 256
+  --name <your_custom_name> \            # custom; set your own name (used to save checkpoints). 
+  --niter <num_epochs_constant_lr> \           # custom; number of epochs with constant LR. In our experiments: 200
+  --niter_decay <num_epochs_lr_decay> \        # custom; number of epochs to linearly decay LR to zero. In our experiments: 100
+  --batch_size <batch_size>                    # custom; batch size. In our experiments: 512
+
 ```
 ### Test the Model
 
